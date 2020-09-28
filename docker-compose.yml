@@ -1,0 +1,15 @@
+version: '3'
+services:
+  db:
+    image: postgres:12-alpine
+    ports:
+      - "5432:5432/tcp"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      PGPASSWORD: postgres
+      PGUSER: postgres
+      POSTGRES_PASSWORD: postgres
+
+volumes:
+  pgdata:
